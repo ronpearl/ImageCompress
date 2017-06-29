@@ -26,12 +26,19 @@ class Files
 		$this->buildFolderStructure();
 
 		if ($localFile)
-			$this->processLocalPath();
+			$this->processLocalPath( $originalFileUrl );
 		else {
 			$this->processUrlPath( $originalFileUrl );
 		}
 	}
 
+	/**
+	 * Process a file from URL
+	 *
+	 * @param $originalFileUrl
+	 *
+	 * @throws \Exception
+	 */
 	public function processUrlPath($originalFileUrl) {
 		// Get the root URL so we can use the parts of it later
 		$rootURL = $thisURL = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
@@ -57,10 +64,19 @@ class Files
 		}
 	}
 
-	public function processLocalPath() {
+	/**
+	 * Process a local file
+	 *
+	 * @param $originalFileUrl
+	 */
+	public function processLocalPath($originalFileUrl) {
+		$this->originalFileUrl = urldecode( $originalFileUrl );
+		$urlArray = explode( "/", $this->originalFileUrl );
+		$this->setFileName( $urlArray[ count( $urlArray ) - 1 ] );
 
-		// TODO: Still need to do processing script for local files
-
+		$this->setCompressedFilename();
+		$this->setCompressedFileUrlPath();
+		$this->setSavedFilename();
 	}
 
 	/**
