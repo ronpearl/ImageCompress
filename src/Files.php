@@ -59,6 +59,8 @@ class Files
 
 	public function processLocalPath() {
 
+		// TODO: Still need to do processing script for local files
+
 	}
 
 	/**
