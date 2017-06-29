@@ -1,0 +1,20 @@
+{
+    "name": "ronpearl/image-compress",
+    "description": "Allows you to utilize Image Magick in order to compress images as needed.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ron Pearl",
+            "email": "ron@ronaldpearl.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.38"
+    },
+    "autoload": {
+        "psr-4": {
+            "ImageCompress\\": "src/"
+        }
+    }
+}
