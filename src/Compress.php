@@ -48,7 +48,7 @@ class Compress Extends Files
 	 * @param bool $localFile
 	 * @param bool $getBase64
 	 *
-	 * @return string
+	 * @return array
 	 * @throws \Exception
 	 */
 	public function doImageCompression($originalFileUrlOrPath, $localFile = true, $getBase64 = false) {
@@ -84,11 +84,12 @@ class Compress Extends Files
 		$this->responseBuilder->setSuccessResponse(
 			$this->getFileName(),
 			$this->getCompressedFileUrlPath(),
+			realpath($this->getCompressedFileName()),
 			$quality,
 			$this->getBase64 ? $this->getImageBase64() : ""
 		);
 
-		return json_encode( $this->responseBuilder->getResponse() );
+		return $this->responseBuilder->getResponse();
 	}
 
 	/**
