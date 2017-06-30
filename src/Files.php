@@ -18,7 +18,7 @@ class Files
 
 
 	function Files($originalFileUrl, $localFile, $trustedSourcesDomains) {
-		$this->setAppRoot( $_SERVER['DOCUMENT_ROOT'] );
+		$this->setAppRoot( __DIR__ . "/../../../../web" );
 		$this->trustedDomains = $trustedSourcesDomains;
 		$this->originalsRoot = $this->appRoot . "/imageCompress/originals/";
 		$this->compressedRoot = $this->appRoot . "/imageCompress/compressed/";
@@ -237,6 +237,6 @@ class Files
 	 * Sets the URL path of the new compressed file
 	 */
 	public function setCompressedFileUrlPath() {
-		$this->compressedFileUrlPath = $this->urlPathArray['scheme'] . '://' . $this->urlPathArray['host'] . "/gcu/gcuedu/webservices/ajax/image-compress/images/compressed/" . $this->randomCompressedName;
+		$this->compressedFileUrlPath = $this->urlPathArray['scheme'] . '://' . $this->urlPathArray['host'] . "/imageCompress/compressed/" . $this->randomCompressedName;
 	}
 }
