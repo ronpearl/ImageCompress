@@ -3,6 +3,7 @@
     "description": "Allows you to utilize Image Magick in order to compress images as needed.",
     "type": "library",
     "version": "1.0.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "Ron Pearl",
