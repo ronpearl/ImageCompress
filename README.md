@@ -11,7 +11,7 @@ It also assumes that you are using composer and you have a composer.json file al
 ```
     {
         "require": {
-           "rpearl/image-compress": "1.*"
+           "rpearl/image-compress": "dev-master"
         }
     }
 ```
