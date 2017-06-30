@@ -60,7 +60,7 @@ $localFile defaults to true, but this sets whether the image is from a URL or fr
 $getBase64 defaults to false, but you can set it to true if you would like to get the base64 results of the compressed file as well.
 
 ## Resulting Image(s)
-The final images will be waved within your "web" directory under the folder "imageCompress". These folders will be created after your first run of the program. There will be 2 other folders under that: compressed and originals. The originals will temporarily hold the original files, and then the compressed images will be saved into the compressed folder for use later.
+The final images will be saved within your "web" directory under the folder "imageCompress". These folders will be created after your first run of the program. There will be 2 other folders under that: compressed and originals. The originals will temporarily hold the original files, and then the compressed images will be saved into the compressed folder for use later.
 
 ## Example
 Youc an view the example.php file for a raw usage of the package.
