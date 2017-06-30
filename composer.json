@@ -10,7 +10,7 @@
             "email": "ron@ronaldpearl.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "php": ">=5.5.38"
     },
