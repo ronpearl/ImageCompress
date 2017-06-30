@@ -2,6 +2,7 @@
     "name": "ronpearl/image-compress",
     "description": "Allows you to utilize Image Magick in order to compress images as needed.",
     "type": "library",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Ron Pearl",
