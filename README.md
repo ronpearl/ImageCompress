@@ -1,4 +1,4 @@
-# ImageCompress
+# ronpearl/image-compress
 Symfony package that will allow you to compress image files using Image Magick
 
 **NOTE:** This is my first attempt at creating a package for packagist. Please feel free to submit any questions or concerns so I can address them accordingly.
